@@ -27,7 +27,7 @@
 //   const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: '1h' });
 //   res.json({ token });
 // };
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { createUser, findUserByUsername } from '../models/userModel.js';
 
