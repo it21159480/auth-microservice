@@ -6,6 +6,11 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
+
 app.use('/api', authRoutes);
 
 const PORT = process.env.PORT || 5000;
