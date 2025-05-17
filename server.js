@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use('/api', authRoutes);
 
-app.get('/health', (req, res) => res.status(200).send('OK'));
+app.get('/health', (req, res) => res.status(200).send('Service is runnig!'));
 
 // Only start server if not in test environment
 if (process.env.NODE_ENV !== 'test') {
